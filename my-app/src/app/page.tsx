@@ -1,4 +1,5 @@
 import Header from "./components/header"
+import {Mail, Smartphone, MapPin} from "lucide-react"
 
 export default function Home() {
   return (
@@ -13,6 +14,11 @@ export default function Home() {
           <div className="flex items-center flex-col gap-3 relative bottom-4">
             <h1 className="text-3xl text-center leading-normal font-semibold">Lucas Gabriel <br /> Moser da Silva</h1>
             <p>21/11/2008</p>
+            <div className="space-y-3 mt-4">
+              <p className="flex gap-3"><Mail size={24} color="white"/>lucas.moserdasilva@gmail.com</p>
+              <p className="flex gap-3"><Smartphone size={24} color="white"/>+55 47 98862-2026</p>
+              <p className="flex gap-3"><MapPin size={24} color="white"/>Rodeio-SC</p>
+            </div>
           </div>
         </section>
       </main>
