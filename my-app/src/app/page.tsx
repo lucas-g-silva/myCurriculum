@@ -1,26 +1,35 @@
 import Header from "./components/header"
-import {Mail, Smartphone, MapPin} from "lucide-react"
+import { Mail, Smartphone, MapPin } from "lucide-react"
+import Section from "./components/section";
 
 export default function Home() {
   return (
-    <div className="w-screen bg-gradient-to-t from-zinc-900 to-zinc-800 flex flex-col">
+    <div className="bg-gradient-to-t from-zinc-900 to-zinc-800 flex flex-col overflow-y-auto screen">
       <Header />
-      <main className="flex p-10 pt-20 h-screen">
-        <section className="flex items-center flex-col relative w-[400px] h-screen bg-white bg-opacity-5 backdrop-blur-md rounded-[40px] top-20 text-white border border-white/10">
+      <main className="flex pr-10 pl-10 h-screen gap-10">
+        <Section className="flex items-center flex-col absolute w-[450px] h-screen top-24">
           <img src="https://github.com/lucas-g-silva.png"
             alt="Foto de Perfil"
-            className="w-64 h-64 rounded-full relative bottom-10 border border-white/10"
+            className="w-64 h-64 rounded-full relative bottom-14 border border-white/10"
           />
           <div className="flex items-center flex-col gap-3 relative bottom-4">
-            <h1 className="text-3xl text-center leading-normal font-semibold">Lucas Gabriel <br /> Moser da Silva</h1>
+            <h1 className="text-3xl text-center leading-normal font-semibold"> Lucas Gabriel <br /> Moser da Silva</h1>
             <p>21/11/2008</p>
             <div className="space-y-3 mt-4">
-              <p className="flex gap-3"><Mail size={24} color="white"/>lucas.moserdasilva@gmail.com</p>
-              <a rel='noopener' title='WhatsApp' target="_blank" href="https://wa.me/5547933819181" className="flex gap-3"><Smartphone size={24} color="white"/>+55 47 93381-9181</a>
-              <p className="flex gap-3"><MapPin size={24} color="white"/>Rodeio-SC</p>
+              <p className="flex gap-3"><Mail size={24} color="white" />lucas.moserdasilva@gmail.com</p>
+              <a rel='noopener' title='WhatsApp' target="_blank" href="https://wa.me/5547933819181" className="flex gap-3 hover:underline"><Smartphone size={24} color="white" />+55 47 93381-9181</a>
+              <a rel='noopener' title='Maps' target="_blank" href="https://www.google.com/maps/place/Rodeio,+SC,+89136-000/@-26.9218178,-49.3701739,14z/data=!3m1!4b1!4m6!3m5!1s0x94de5555f56b50db:0x717991712fffe439!8m2!3d-26.9223775!4d-49.3678851!16s%2Fm%2F09rt1ff?entry=ttu" className="flex gap-3 hover:underline"><MapPin size={24} color="white" />Rodeio-SC</a>
             </div>
           </div>
-        </section>
+        </Section>
+        <div className="flex-auto pr-4 pl-[500px] mt-24 space-y-6 scroll">
+          <Section className="w-full h-[50vh]">
+          </Section>
+          <Section className="w-full h-[50vh]">
+          </Section>
+          <Section className="w-full h-[50vh]">
+          </Section>
+        </div>
       </main>
     </div>
   );
