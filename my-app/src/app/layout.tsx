@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = JetBrains_Mono({ subsets: ["latin"] });
+const font = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Lucas Gabriel",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + " overflow-hidden"}>{children}</body>
+      <body className={font.className + " overflow-hidden"}>{children}</body>
     </html>
   );
 }
